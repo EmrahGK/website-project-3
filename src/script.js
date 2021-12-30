@@ -49,6 +49,7 @@ function main() {
         text: `${t.name} (${t.subject})`
       };
     }),
+    width: 'resolve',
   });
   
   $(".class-select").select2({
@@ -59,5 +60,6 @@ function main() {
         text: id,
       };
     }),
+    width: 'resolve',
   });
 }
