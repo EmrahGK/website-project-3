@@ -2,7 +2,7 @@
   "throttle": 3000,
   "restart": {
     "exclude": [
-      "^src/"
+      "src/*"
     ]
   }
 }

@@ -8,8 +8,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/data/:pass", (req, res) => {
-  if(process.env.PASSWD != req.params.pass) return res.send(403);
+  console.log("a");
+  if(process.env.PASSWD != req.params.pass) return res.sendStatus(403);
   res.sendFile(__dirname + "/db/data.json");
 });
 
 app.listen(process.env.PORT);
+console.log("Listening");
