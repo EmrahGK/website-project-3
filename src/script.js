@@ -50,6 +50,7 @@ function main() {
       };
     }),
     width: 'resolve',
+    placeholder: "...",
   });
   
   $(".class-select").select2({
@@ -61,5 +62,18 @@ function main() {
       };
     }),
     width: 'resolve',
+    placeholder: "...",
   });
+}
+
+async function pbutton(t) {
+  if(t == "t") {
+    // teacher
+    
+    let teacher = $('#teacher-select').select2('data')[];
+  } else {
+    // class
+    
+    let class = $('#class-select').select2('data')[0];
+  }
 }
