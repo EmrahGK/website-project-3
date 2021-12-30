@@ -1,0 +1,19 @@
+{
+  "classes": [
+    {
+      "id": "10-E",
+      "grade": 10,
+      "letter": "E",
+      "periods": [
+        []
+      ]
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Betül Karakırık",
+      ""
+    }
+  ]
+}
