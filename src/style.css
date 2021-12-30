@@ -15,3 +15,7 @@ select {
   font-size: 50;
   border: blueviolet 5px;
 }
+
+.select2-results {
+  background-color: #444;
+}

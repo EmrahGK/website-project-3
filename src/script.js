@@ -43,10 +43,10 @@ run()
 
 function main() {
   $(".teacher-select").select2({
-    data: Data.teachers.map(t => {
+    data: Data.teachers.filter(t => t.id != 0).map(t => {
       return {
         id: t.id,
-        text: `${t.name} (t.subject)`
+        text: `${t.name} (${t.subject})`
       };
     }),
   });
