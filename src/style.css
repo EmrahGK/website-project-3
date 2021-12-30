@@ -8,5 +8,6 @@ body {
 }
 
 .header {
+  font-size: 50;
   border: blueviolet 5px;
 }
