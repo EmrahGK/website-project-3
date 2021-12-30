@@ -1,0 +1,12 @@
+body {
+  background-color: #2f3136;
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.header {
+  border: blueviolet 5px;
+}
