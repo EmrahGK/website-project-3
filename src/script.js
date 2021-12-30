@@ -70,10 +70,12 @@ async function pbutton(t) {
   if(t == "t") {
     // teacher
     
-    let teacher = $('#teacher-select').select2('data')[];
+    let teacher = $('#teacher-select').select2('data')[0]; // id, name, subject
+    
+    
   } else {
     // class
     
-    let class = $('#class-select').select2('data')[0];
+    let c = $('#class-select').select2('data')[0]; // id, periods, grade, letter
   }
 }
