@@ -5,7 +5,16 @@
       "grade": 10,
       "letter": "E",
       "periods": [
-        []
+        [
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          0,
+          5
+        ]
       ]
     }
   ],
@@ -13,7 +22,32 @@
     {
       "id": 1,
       "name": "Betül Karakırık",
-      ""
+      "subject": "tde"
+    },
+    {
+      "id": 2,
+      "name": "Betül Sever Özkan",
+      "subject": "mat"
+    },
+    {
+      "id": 3,
+      "name": "Sevinç .",
+      "subject": "felsefe"
+    },
+    {
+      "id": 4,
+      "name": "Vedat Çelik",
+      "subject": "coğrafya"
+    },
+    {
+      "id": 0,
+      "name": "Boş Ders",
+      "subject": "null"
+    },
+    {
+      "id": 5,
+      "name": "Ertuğrul Yurtsever",
+      "subject": "din"
     }
   ]
 }

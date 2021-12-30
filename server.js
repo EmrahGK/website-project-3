@@ -7,4 +7,9 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/src/index.html");
 });
 
-app.listen(process.env.PORT)
+app.get("/data/:pass", (req, res) => {
+  if(process.env.PASSWD != req.params.pass) return res.send(403);
+  res.sendFile(__dirname + "/db/data.json");
+});
+
+app.listen(process.env.PORT);
