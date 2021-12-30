@@ -15,24 +15,39 @@ async function run() {
       localStorage.setItem("password", p);
       passRight = true;
     } catch {
-      localStorage.setItem("password", null);
+      localStorage.setItem("password", "");
       passRight = false;
     }
   }
   
   let _t = "";
   while(!passRight) {
-    if(localStorage.getItem("password") !== null) {
+    if(!!localStorage.getItem("password")) {
       await tryPassword(localStorage.getItem("password"));
       if(passRight) break;
-      localStorage.setItem("password", null);
+      localStorage.setItem("password", "");
     }
     passwd = prompt(_t + "Şifreyi Girin:");
     await tryPassword(passwd);
     _t = "Yanlış şifre!\n\n";
   };
   
-  alert("Şifre doğru");
+  main()
 }
 
 run()
+
+
+
+
+
+function main() {
+  $(".teacher-select").select2({
+    data: Data.teachers.map(t => {
+      return {
+        id: t.id,
+        text: `${t.name} (t.subject)`
+      };
+    }),
+  });
+}

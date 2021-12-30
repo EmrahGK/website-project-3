@@ -3,6 +3,10 @@ body {
   color: white;
 }
 
+select {
+  width: 50%;
+}
+
 .center {
   text-align: center;
 }
