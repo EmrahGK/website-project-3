@@ -50,4 +50,14 @@ function main() {
       };
     }),
   });
+  
+  $(".class-select").select2({
+    data: Data.classes.map(c => {
+      let id = c.name || (c.grade + "-" + c.letter);
+      return {
+        id,
+        text: id,
+      };
+    }),
+  });
 }

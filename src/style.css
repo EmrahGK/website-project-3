@@ -19,3 +19,7 @@ select {
 .select2-results {
   background-color: #444;
 }
+
+hr {
+  width: 50%;
+}
