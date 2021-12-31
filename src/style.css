@@ -23,3 +23,9 @@ select {
 hr {
   width: 50%;
 }
+
+#admin-button{
+  color: white;
+  text-decoration: none;
+  cursor: context-menu;
+}
