@@ -1,8 +1,8 @@
 {
-  "throttle": 3000,
-  "restart": {
-    "exclude": [
-      "src/*"
-    ]
+    "throttle": 3000,
+    "restart": {
+      "exclude": [
+        "src/*"
+      ]
+    }
   }
-}

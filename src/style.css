@@ -1,31 +1,31 @@
 body {
-  background-color: #2f3136;
-  color: white;
-}
-
-select {
-  width: 50%;
-}
-
-.center {
-  text-align: center;
-}
-
-.header {
-  font-size: 50;
-  border: blueviolet 5px;
-}
-
-.select2-results {
-  background-color: #444;
-}
-
-hr {
-  width: 50%;
-}
-
-#admin-button{
-  color: white;
-  text-decoration: none;
-  cursor: context-menu;
-}
+    background-color: #2f3136;
+    color: white;
+  }
+  
+  select {
+    width: 50%;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .header {
+    font-size: 50;
+    border: blueviolet 5px;
+  }
+  
+  .select2-results {
+    background-color: #444;
+  }
+  
+  hr {
+    width: 50%;
+  }
+  
+  #admin-button{
+    color: white;
+    text-decoration: none;
+    cursor: context-menu;
+  }
