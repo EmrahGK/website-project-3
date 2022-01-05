@@ -1,0 +1,28 @@
+body{
+    background-position-x: center;
+    background-position-y: center;
+    background-color: rgba(238, 10, 10, 0.876);
+}
+
+#header{
+    text-align: center;
+    color: black;
+    font-size: 2em;
+}
+
+#rainbow{
+    height: 85%;
+    width: 94%;
+    margin: 0 auto;
+    background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red); 
+    margin-top: -20px;
+    border: 10px solid rgb(238, 10, 10);
+    box-sizing: border-box;
+    border-radius: 20px;   
+}
+
+#anchor{
+    text-decoration: none;
+    color: black;
+    cursor: n-resize;
+}

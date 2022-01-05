@@ -1,0 +1,44 @@
+{
+    "classes": [
+      {
+        "id": "10-E",
+        "grade": 10,
+        "letter": "E",
+        "periods": [
+          2,: 2,
+    ],    2,
+    "tea  3,
+      {   3,
+          4,: 1,
+          4,e": "Betül Karakırık",
+          0,
+      },  5
+      { ]
+        "id": 2,
+     ,  "name": "Betül Sever Özkan",
+    "teachers": [
+      {
+        "id": 1,
+        "name": "Betül Karakırık",
+        "subject": "tde"
+      },
+      {
+        "id": 2,
+        "name": "Betül Sever Özkan",
+        "subject": "mat"
+      },
+      {
+        "id": 3,
+        "name": "Sevinç Özcan",
+        "subject": "felsefe"
+      },
+      {
+        "id": 4,
+        "name": "Vedat Çelik",
+        "subject": "coğrafya"
+      },
+      {
+        "id": 0,
+        "name": "Boş Ders",
+        "subject": "null"
+      },
