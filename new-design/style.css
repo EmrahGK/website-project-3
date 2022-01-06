@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-height:99%; 
+    background-color: #111;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+#header-div{
+    text-align: center;
+    color: #777;
+    font-size: 1.8em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#header{
+    background-color: #222;
+    box-sizing: border-box;
+    border: 1px solid #222;
+    border-radius: 10px;
+    font-size: 2em;
+    padding: 0 0 0 0;
+}
+
+#class-select-label{
+    color: #ffffff;
+    display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    max-width: 100%;
+}
+
+#class-select-select{
+    width: 98%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
