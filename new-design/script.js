@@ -1,5 +1,6 @@
 let marquee = document.getElementById("header");
 
+
 function resize(){
     let innerWidth = window.innerWidth;
 

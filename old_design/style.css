@@ -1,0 +1,146 @@
+body {
+    background-color: #222;
+    color: white;
+  }
+  
+  select {
+    width: 50%;
+  }
+  
+  .guide-article{
+    font-size:1.5em
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .header {
+    font-size: 50;
+    border: blueviolet 5px;
+  }
+  
+  .select2-results {
+    background-color: #444;
+  }
+  
+  .button{
+    margin-top:1em;
+    padding: 7px;
+    text-decoration:underline;
+    color:black;
+  }
+  
+  hr {
+    width: 50%;
+  }
+  
+  #text-hocafinder{
+    color:white;
+    font-size: 4em;
+    font-weight: bold;
+  }
+  
+  #admin-button {
+    color: white;
+    text-decoration: none;
+    cursor: context-menu;
+  }
+  
+  #program-div {
+    background-color: #555;
+    width: 98%;
+    margin: auto;
+    padding: 10px 0 0 0;
+    padding-bottom: 2%;
+    border: 5px solid #333;
+    border-radius: 7px;
+    border-top: 0px;
+    display: none;
+    text-align: center;
+    overflow-x: auto; /* please ;-; */
+    position: relative;
+  }
+  
+  table {
+    margin: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-radius: 5px;
+    font-family: Helvetica;
+    font-size: 1.2em;
+    background-color: white;
+    color: black;
+  }
+  
+  
+  
+  table td {
+    padding: 0.5em 0.75em 0 0.5em;
+    border: 2px solid black;
+    width:2%;
+    height: 2em;
+  }
+  
+  .days {
+    text-align: center;
+  }
+  
+  #note-text {
+    text-align: center;
+  }
+  
+  #anchor {
+    text-decoration: none;
+    color: blue;
+  }
+  
+  /* copy paste by dennis lmao */
+  
+  button {
+    border: 1px solid #0066cc;
+    text-decoration: none;
+    background-color: #0099cc;
+    color: white;
+    padding: 5px 10px;
+    transition:0.3s;
+    /*geçiş süresini 0.8 olarak ayarladım satır 98 (19:38)*/
+  }
+  
+  /* HOVER ANİMASYONLARI NİYE EKİYOZ BUNU TOUCH DEVİCELARDA KULLANCAZ DKJHFGKDF
+  MANTIKLI
+  AMA OLSUN
+  PC DE AÇANLAR İÇİN (2 kişi) MANTIKLI OLABİLİR ZART DİYE GEÇMESİNDEN İYİDİR
+  (akıllı tahta da touch device smhASDASDASD OLSUN BANA GÖRE PC..
+  ZORT DİYE GEÇİYO SİNİR OLDUM DÜZELTESİM GELDİ.
+  
+  !!!!!!!!BİDE RENKLER HAKKINDA DA UFAK Bİ ÇALIŞMA YAPMAMIZ LAZIM BOK GİBİ DURUYOR.(SINAWA ÇALIŞIORUM YARIN ÖĞLE TENEFÜSÜNDE HALLEDİLİR.))
+  
+  AKILLI TAHTALARI DA PCLER İÇİNE ALIYORUM 
+  caps*/
+  
+  button:hover {
+    border: 1px solid #0099cc;
+    background-color: #00aacc;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: underline;
+  }
+  
+  button:disabled,
+  button[disabled]{
+    border: 1px solid #0099cc;
+    background-color: #0099cc;
+    color: black;
+  }
+  
+  button[disabled]:hover{
+    border: 1px solid #0099cc;
+    background-color: #00aacc;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: underline;
+  }
+  
+  
+  /***/
