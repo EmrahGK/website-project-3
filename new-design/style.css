@@ -47,7 +47,7 @@ body{
 }
 
 #class-select-button{
-    background-image: linear-gradient(blue,rgb(67, 67, 83));
+    background-image: linear-gradient(white,gray,gray,white);
     border: 0;
     float: right;
     margin-right:2%;
