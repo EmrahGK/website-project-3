@@ -1,8 +1,62 @@
 {
-    "throttle": 3000,
-    "restart": {
-      "exclude": [
-        "src/*"
+  "classes": [
+    {
+      "id": "10-E",
+      "grade": 10,
+      "letter": "E",
+      "periods": [
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        0,
+        5
       ]
     }
-  }
+  ],
+  "teachers": [
+    {
+      "id": 0,
+      "name": "Boş Ders",
+      "subject": "null"
+    },
+    {
+      "id": 1,
+      "name": "Betül Karakırık",
+      "subject": "Edebiyat"
+    },
+    {
+      "id": 2,
+      "name": "Betül Sever Özkan",
+      "subject": "Matematik"
+    },
+    {
+      "id": 3,
+      "name": "Sevinç Özcan",
+      "subject": "Felsefe"
+    },
+    {
+      "id": 4,
+      "name": "Vedat Çelik",
+      "subject": "coğrafya"
+    },
+    {
+      "id": 5,
+      "name": "Ertuğrul Yurtsever",
+      "subject": "din"
+    },
+    {
+      "id": 6,
+      "name": "Tolga Yaman",
+      "subject": "Matematik"
+    },
+    {
+      "id": 7,
+      "name": "Osman Arslan",
+      "subject": "Fizik"
+    },
+    
+  ]
+}

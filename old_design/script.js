@@ -1,4 +1,4 @@
-console.log("Script is running");
+/*console.log("Script is running");
 
 let Data = { classes: [], teachers: [] };
 
@@ -7,16 +7,31 @@ let passRight = false;
 
 async function run() {
   
+  function inIframe () {
+      try {
+          return window.self !== window.top;
+      } catch (e) {
+          return true;
+      }
+  }
+  
+  if(inIframe()) {
+    document.write("IFrame Error");
+    return;
+  }
+  
   let tryPassword = async (p) => {
     try {
-      let r = await fetch(`/data/${p}`);
+      let r = await fetch(`/api/data/${p}`);
       if(!r.ok) throw new Error("wrong password");
       Data = await r.json();
       localStorage.setItem("password", p);
       passRight = true;
+      console.log("Password right: " + p);
     } catch {
       localStorage.setItem("password", "");
       passRight = false;
+      console.log("Wrong Password");
     }
   }
   
@@ -66,7 +81,23 @@ function main() {
   });
 }
 
-async function pbutton(t) {
+
+
+
+
+const Subjects = {};
+
+
+
+
+
+const getTeacher = (id) => Data.teachers.filter(t => t.id == id)[0] || getTeacher(0);
+const getPeriods = (id) => Data.classes.filter(t => t.id == id)[0].periods;
+const formatTeacher = (d) => d.name + "\n" + (d.subject != "null" ? d.subject.toUpperCase() : "");
+
+
+
+function pbutton(t) {
   if(t == "t") {
     // teacher
     
@@ -76,6 +107,21 @@ async function pbutton(t) {
   } else {
     // class
     
+    document.getElementById("forms").style.display = "none";
+    
     let c = $('#class-select').select2('data')[0]; // id, periods, grade, letter
+    
+    getPeriods(c.id).forEach((id, index) => {
+      let i = index + 1;
+      
+      document.getElementById(`d${i}`).innerText = formatTeacher(getTeacher(id));
+    })
+    
+    document.getElementById("program-div").style.display = "block";
   }
 }
+
+function hidebtn(){
+  document.getElementById("program-div").style.display = "none";
+  document.getElementById("forms").style.display = "block";
+}*/
