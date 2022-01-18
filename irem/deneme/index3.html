@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>iremin sayfası</title>
+    <script src="./script.js"></script>
+    <style>
+        body {
+            background-image: linear-gradient(purple,white);
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #header1 {
+            text-align: center;
+            font-size: 1.5m;
+            color: white;
+            font-family: 'Rubik Beastly', cursive;
+        }
+        
+        #form-div form{
+            color:  white;
+        }
+
+        #inputs{
+            width: fit-content;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        #submit-button{
+            float: right;
+            margin-top: 0.5em;
+        }
+
+
+        
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id="page">
+
+        <div id="content">
+
+
+            <div id="header-div">
+                <h1 id="header1">FORM</h1>
+            </div>
+            
+<hr>
+
+            <div id="form-div">
+
+                <form id="form">
+
+                    <div id="inputs">
+                    
+                        <label id="name-label">
+                            Öğrenci Adı:
+                        </label>
+                        <br>
+                        <input type="text" name="name">
+                        <br>
+                        <label id="surname-label">
+                            Öğrenci Soyadı:
+                        </label>
+                        <br>
+                        <input type="text" name="surname">
+                        <br>    
+                        <input type="button" onclick="myFunction()" value="Gönder" id="submit-button">
+
+                    </div>
+    
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
