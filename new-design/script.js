@@ -1,21 +1,199 @@
-let marquee = document.getElementById("header");
+console.log("Script is running");
 
+let Data = { classes: [], teachers: [] };
 
-function resize(){
-    let innerWidth = window.innerWidth;
+let passwd;
+let passRight = false;
 
-    if(1200 < innerWidth){
-        marquee.setAttribute("scrollamount", "10");
-    }
-
-    else if(900 <= innerWidth <= 1200){
-        marquee.setAttribute("scrollamount", "5");
-    }
-
-    else if(900 > innerWidth){
-        marquee.setAttribute("scrollamount", "1");
-    }
+let PeriodTiming = {
+    normal: [
+        { start: "8:50", end: "9:30",   name: "1.ders", type: "ders" },
+        { start: "9:30", end: "9:40",   name: "1.tenefüs", type:"tenefüs"},
+        { start: "9:40", end: "10:20",  name: "2.ders", type:"tenefüs" },
+        { start: "10:20", end: "10:30", name: "2.tenefüs", type:"tenefüs"},
+        { start: "10:30", end: "11:10", name: "3.ders", type:"tenefüs" },
+        { start: "11:10", end: "11:20", name: "3.tenefüs", type:"tenefüs"},
+        { start: "11:20", end: "12:00", name: "4.ders", type:"tenefüs" },
+        { start: "12:00", end: "12:50", name: "4.tenefüs", type:"tenefüs"},
+        { start: "12:50", end: "13:30", name: "5.ders", type:"tenefüs" },
+        { start: "13:30", end: "13:40", name: "5.tenefüs", type:"tenefüs"},
+        { start: "13:40", end: "14:20", name: "6.ders", type:"tenefüs" },
+        { start: "14:20", end: "14:30", name: "6.tenefüs", type:"tenefüs"},
+        { start: "14:30", end: "15:10", name: "7.ders", type:"tenefüs" },
+        { start: "15:10", end: "15:20", name: "7.tenefüs", type:"tenefüs"},
+        { start: "15:20", end: "16:00", name: "8.ders", type:"tenefüs" },
+    ],
+    friday: [
+        { start: "8:50", end: "9:30",   name: "1.ders", type: "ders" },
+        { start: "9:30", end: "9:40",   name: "1.tenefüs", type:"tenefüs"},
+        { start: "9:40", end: "10:20",  name: "2.ders", type:"tenefüs" },
+        { start: "10:20", end: "10:30", name: "2.tenefüs", type:"tenefüs"},
+        { start: "10:30", end: "11:10", name: "3.ders", type:"tenefüs" },
+        { start: "11:10", end: "11:20", name: "3.tenefüs", type:"tenefüs"},
+        { start: "11:20", end: "12:00", name: "4.ders", type:"tenefüs" },
+        { start: "12:00", end: "12:10", name: "4.tenefüs", type:"tenefüs"},
+        { start: "12:10", end: "12:50", name: "5.ders", type:"tenefüs" },
+        { start: "12:50", end: "13:40", name: "5.tenefüs", type:"tenefüs"},
+        { start: "13:40", end: "14:20", name: "6.ders", type:"tenefüs" },
+        { start: "14:20", end: "14:30", name: "6.tenefüs", type:"tenefüs"},
+        { start: "14:30", end: "15:10", name: "7.ders", type:"tenefüs" },
+        { start: "15:10", end: "15:20", name: "7.tenefüs", type:"tenefüs"},
+        { start: "15:20", end: "16:00", name: "8.ders", type:"tenefüs" },
+    ]
 }
 
-resize();
-window.onresize = resize;
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  let isFriday = today.getDay() == 5;
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+
+  let times = PeriodTiming[isFriday ? "friday" : "normal" ];
+
+  let current = times.filter(time => {
+      let startHour = Number(time.start.split(":")[0]);
+      let startMinutes = Number(time.start.split(":")[1]);
+
+      let endHour = Number(time.end.split(":")[0]);
+      let endMinutes = Number(time.end.split(":")[1]);
+
+      return h > startHour && m > startMinutes && h < endHour && m < endMinutes;
+  })[0];
+
+  document.getElementById("ders-saati").innerHTML = "Şu an " + current.name;
+
+}
+
+
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+
+async function run() {
+  
+  function inIframe () {
+      try {
+          return window.self !== window.top;
+      } catch (e) {
+          return true;
+      }
+  }
+  
+  if(inIframe()) {
+    document.write("IFrame Error");
+    return;
+  }
+  
+  let tryPassword = async (p) => {
+    try {
+      let r = await fetch(`/api/data/${p}`);
+      if(!r.ok) throw new Error("wrong password");
+      Data = await r.json();
+      localStorage.setItem("password", p);
+      passRight = true;
+      console.log("Password right: " + p);
+    } catch {
+      localStorage.setItem("password", "");
+      passRight = false;
+      console.log("Wrong Password");
+    }
+  }
+  
+  let _t = "";
+  while(!passRight) {
+    if(!!localStorage.getItem("password")) {
+      await tryPassword(localStorage.getItem("password"));
+      if(passRight) break;
+      localStorage.setItem("password", "");
+    }
+    passwd = prompt(_t + "Şifreyi Girin:");
+    await tryPassword(passwd);
+    _t = "Yanlış şifre!\n\n";
+  };
+  
+  main()
+}
+
+run()
+
+
+
+
+
+function main() {
+  $(".teacher-select").select2({
+    data: Data.teachers.filter(t => t.id != 0).map(t => {
+      return {
+        id: t.id,
+        text: `${t.name} (${t.subject})`
+      };
+    }),
+    width: 'resolve',
+    placeholder: "...",
+  });
+  
+  $(".class-select").select2({
+    data: Data.classes.map(c => {
+      let id = c.name || (c.grade + "-" + c.letter);
+      return {
+        id,
+        text: id,
+      };
+    }),
+    width: 'resolve',
+    placeholder: "...",
+  });
+}
+
+
+
+
+
+const Subjects = {};
+
+
+
+
+
+const getTeacher = (id) => Data.teachers.filter(t => t.id == id)[0] || getTeacher(0);
+const getPeriods = (id) => Data.classes.filter(t => t.id == id)[0].periods;
+const formatTeacher = (d) => d.name + "\n" + (d.subject != "null" ? d.subject.toUpperCase() : "");
+
+
+
+function pbutton(t) {
+  if(t == "t") {
+    // teacher
+    
+    let teacher = $('#teacher-select').select2('data')[0]; // id, name, subject
+    
+    
+  } else {
+    // class
+    
+    document.getElementById("forms").style.display = "none";
+    
+    let c = $('#class-select').select2('data')[0]; // id, periods, grade, letter
+    
+    getPeriods(c.id).forEach((id, index) => {
+      let i = index + 1;
+      
+      document.getElementById(`d${i}`).innerText = formatTeacher(getTeacher(id));
+    })
+    
+    document.getElementById("program-div").style.display = "block";
+  }
+}
+
+function hidebtn(){
+  document.getElementById("program-div").style.display = "none";
+  document.getElementById("forms").style.display = "block";
+}
