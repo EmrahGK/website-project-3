@@ -1,0 +1,18 @@
+@import url("http://fonts.cdnfonts.com/css/anime-ace");
+@import url(https://db.onlinewebfonts.com/c/c8e8fcd5d85d9b587022fe0a79809b73?family=Friz+Quadrata);
+
+body {
+    background-image: linear-gradient(purple,gray);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#header1{
+    color: white;
+    font-size: 3em;
+    font-family: 'Friz Quadrata';
+    font-weight: normal;
+    margin-top: 0;
+    padding: 1em 0 0 1em;
+}

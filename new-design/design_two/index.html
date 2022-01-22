@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+
+    <title>2.Yeni dizayn</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="EmrahGK">
+    <meta name="description" content="HocaFinder 'projesi' için yapılan yeni bir uyduruk index.">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="http://fonts.cdnfonts.com/css/angel-wish" rel="stylesheet">
+    <!--
+        <script type="text/javascript" src="./script.js" defer></script>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <style>
+
+    </style>
+
+
+</head>
+
+<body onload="startTime()">
+
+
+    <div id="header-div">
+
+        <h1 id="header1">HocaFinder</h1>
+
+        <!-- Saat kaç? - Kaçıncı ders saatindeyiz?-->
+        <span id="clock"></span>
+        <span id="ders-saati"></span>
+
+    </div>
+
+    <div id="content">
+
+        
+        <div id="form-div">
+
+            <label for="class-select" class="guide-article">
+                Sınıf Seç
+            </label>
+    <br>
+            <select class="class-select" name="classes" id="class-select">
+                <!--Hangi sınıfın ders programı-->
+            </select>
+    <br>
+            <button id="class-button" class="button" onclick="pbutton('c');">
+                Sınıfın ders programını göster
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+
+</html>

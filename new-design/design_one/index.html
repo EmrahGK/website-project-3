@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<!--
+cd .data
+nano data.json
+-->
+
+<html lang="tr">
+
+<head>
+    <title>HocaFinder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body onload="startTime()">
+    <div class="center header">
+      <span id="text-hocafinder"> 
+        HocaFinder
+      </span>
+
+      <span id="clock"></span>
+      <span id="ders-saati"></span>
+
+    </div>
+  <hr>
+  <div class="box center half" id="forms">
+    <label for="teacher-select" class="guide-article">Öğr<a href="./admin/index.html" id="admin-button">e</a>tmen Seç</label>
+    <br>
+    <select class="teacher-select center" name="teacher" id="teacher-select">
+
+    </select> 
+
+    <br>
+    <button id="teacher-button" class="button" id="bu-hoca-nerede" onclick="pbutton('t');" disabled>Bu hoca
+      nerede?</button>
+
+    <hr>
+
+    <label for="class-select" class="guide-article">ya da Sınıf Seç</label>
+    <br>
+    <select class="class-select" name="classes" id="class-select">
+
+    </select>
+    <br>
+    <button id="class-button" class="button" onclick="pbutton('c');">Sınıfın ders programını göster</button>
+
+  </div>
+
+
+
+  <div id="program-div">
+
+    <h1 id="program-header"><span id="program-classname">X</span> SINIFI HAFTALIK DERS PROGRAMI</h1>
+
+    <table id="table">
+      <tr id="class-numbers">
+        <td></td>
+        <td>1.DERS</td>
+        <td>2.DERS</td>
+        <td>3.DERS</td>
+        <td>4.DERS</td>
+        <td>5.DERS</td>
+        <td>6.DERS</td>
+        <td>7.DERS</td>
+        <td>8.DERS</td>
+      </tr>
+
+      <tr>
+        <td class="days">Pazartesi</td>
+        <td id="d1">Yükleniyor...</td>
+        <td id="d2">Yükleniyor...</td>
+        <td id="d3">Yükleniyor...</td>
+        <td id="d4">Yükleniyor...</td>
+        <td id="d5">Yükleniyor...</td>
+        <td id="d6">Yükleniyor...</td>
+        <td id="d7">Yükleniyor...</td>
+        <td id="d8">Yükleniyor...</td>
+      </tr>
+
+      <tr>
+        <td class="days">Salı</td>
+        <td id="d9">Yükleniyor...</td>
+        <td id="d10">Yükleniyor...</td>
+        <td id="d11">Yükleniyor...</td>
+        <td id="d12">Yükleniyor...</td>
+        <td id="d13">Yükleniyor...</td>
+        <td id="d14">Yükleniyor...</td>
+        <td id="d15">Yükleniyor...</td>
+        <td id="d16">Yükleniyor...</td>
+      </tr>
+
+      <tr>
+        <td class="days">Çarşamba</td>
+        <td id="d17">Yükleniyor...</td>
+        <td id="d18">Yükleniyor...</td>
+        <td id="d19">Yükleniyor...</td>
+        <td id="d20">Yükleniyor...</td>
+        <td id="d21">Yükleniyor...</td>
+        <td id="d22">Yükleniyor...</td>
+        <td id="d23">Yükleniyor...</td>
+        <td id="d24">Yükleniyor...</td>
+      </tr>
+
+      <tr>
+        <td class="days">Perşembe</td>
+        <td id="d25">Yükleniyor...</td>
+        <td id="d26">Yükleniyor...</td>
+        <td id="d27">Yükleniyor...</td>
+        <td id="d28">Yükleniyor...</td>
+        <td id="d29">Yükleniyor...</td>
+        <td id="d30">Yükleniyor...</td>
+        <td id="d31">Yükleniyor...</td>
+        <td id="d32">Yükleniyor...</td>
+      </tr>
+
+      <tr>
+        <td class="days">Cuma</td>
+        <td id="d33">Yükleniyor... </td>
+        <td id="d34">Yükleniyor... </td>
+        <td id="d35">Yükleniyor... </td>
+        <td id="d36">Yükleniyor... </td>
+        <td id="d37">Yükleniyor... </td>
+        <td id="d38">Yükleniyor... </td>
+        <td id="d39">Yükleniyor... </td>
+        <td id="d40">Yükleniyor... </td>
+      </tr>
+    </table>
+    <br>
+    <button onclick="hidebtn()" id="turn-back">
+      Geri Dön
+    </button>
+  </div>
+
+</body>
+
+</html>
