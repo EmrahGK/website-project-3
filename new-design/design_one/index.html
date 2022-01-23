@@ -8,31 +8,33 @@ nano data.json
 <html lang="tr">
 
 <head>
-    <title>HocaFinder</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <title>HocaFinder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
 <body onload="startTime()">
-    <div class="center header">
-      <span id="text-hocafinder"> 
-        HocaFinder
-      </span>
+  <div class="center header">
+    <span id="text-hocafinder">
+      HocaFinder
+    </span>
 
-      <span id="clock"></span>
-      <span id="ders-saati"></span>
+    <span id="clock"></span>
+    <span id="ders-saati"></span>
 
-    </div>
+  </div>
   <hr>
   <div class="box center half" id="forms">
-    <label for="teacher-select" class="guide-article">Öğr<a href="./admin/index.html" id="admin-button">e</a>tmen Seç</label>
+    <fieldset>
+    <legend class="guide-article">Öğr<a href="./admin/index.html" id="admin-button">e</a>tmen
+      Seç</legend>
     <br>
     <select class="teacher-select center" name="teacher" id="teacher-select">
 
-    </select> 
+    </select>
 
     <br>
     <button id="teacher-button" class="button" id="bu-hoca-nerede" onclick="pbutton('t');" disabled>Bu hoca
@@ -47,7 +49,7 @@ nano data.json
     </select>
     <br>
     <button id="class-button" class="button" onclick="pbutton('c');">Sınıfın ders programını göster</button>
-
+    </fieldset>
   </div>
 
 
