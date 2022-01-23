@@ -1,18 +1,61 @@
 @import url("http://fonts.cdnfonts.com/css/anime-ace");
 @import url(https://db.onlinewebfonts.com/c/c8e8fcd5d85d9b587022fe0a79809b73?family=Friz+Quadrata);
 
+
+
 body {
+    background-color: gray;
     background-image: linear-gradient(purple,gray);
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     height: 100vh;
 }
 
 #header1{
+    display: inline-block;
     color: white;
-    font-size: 3em;
+    font-size: 4em;
     font-family: 'Friz Quadrata';
     font-weight: normal;
     margin-top: 0;
     padding: 1em 0 0 1em;
 }
+
+#clock{
+    padding-left: 1em;
+}
+
+.saat{
+    color: white;
+}
+
+#class-select-fieldset{
+    margin-left: 1em;
+    margin-right: 1.2em;
+    min-height: 25em;
+    border: 2px solid #eeeeee
+}
+
+#class-select-legend{
+    color: black;
+    font-size: 2em;
+    font-weight: normal;
+    font-family: 'Friz Quadrata';
+    background-color: #eeeeee;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+#class-select-select{
+    display: block;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+
+
+

@@ -11,10 +11,7 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link href="http://fonts.cdnfonts.com/css/angel-wish" rel="stylesheet">
-    <!--
-        <script type="text/javascript" src="./script.js" defer></script>
-    -->
+    <script type="text/javascript" src="./script.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <style>
@@ -27,34 +24,45 @@
 <body onload="startTime()">
 
 
-    <div id="header-div">
+    <div id="header-div" onmousedown='return false;' onselectstart='return false;'>
 
         <h1 id="header1">HocaFinder</h1>
 
         <!-- Saat kaç? - Kaçıncı ders saatindeyiz?-->
-        <span id="clock"></span>
-        <span id="ders-saati"></span>
+        <span id="clock" class="saat"></span>
+        <span id="ders-saati" class="saat"></span>
 
     </div>
 
-    <div id="content">
+    <div id="content" onmousedown='return false;' onselectstart='return false;'>
 
         
         <div id="form-div">
 
-            <label for="class-select" class="guide-article">
-                Sınıf Seç
-            </label>
-    <br>
-            <select class="class-select" name="classes" id="class-select">
-                <!--Hangi sınıfın ders programı-->
-            </select>
-    <br>
-            <button id="class-button" class="button" onclick="pbutton('c');">
-                Sınıfın ders programını göster
-            </button>
+                <fieldset id="class-select-fieldset">  
+
+                <legend id="class-select-legend">
+                    
+                    <label for="class-select" class="guide-article" id="class-select-legend-label">
+                        Sınıf seç.
+                    </label>
+
+                </legend>
+
+                <select class="class-select" name="classes" id="class-select-select">
+                    <!--Hangi sınıfın ders programı-->
+                </select>
+        <br>
+                <button id="class-select-button" class="button" onclick="pbutton('c');">
+                    Ders programını göster
+                </button>
+
+                
+                </fieldset>
+            
 
         </div>
+
 
     </div>
 
